@@ -15,7 +15,8 @@
             </http:error-response>
         </http:listener>
         <apikit:router config-ref="calculator-config" />
-        <error-handler>
+        <logger level="INFO" doc:name="Logger" doc:id="a5206424-5c5f-4f40-9878-d33ff9686ca1" message="hi"/>
+		<error-handler>
             <on-error-propagate type="APIKIT:BAD_REQUEST">
                 <ee:transform>
                     <ee:message>
@@ -28,6 +29,7 @@ output application/json
                         <ee:set-variable variableName="httpStatus">400</ee:set-variable>
                     </ee:variables>
                 </ee:transform>
+				<logger level="INFO" doc:name="Logger" doc:id="a93695cc-a149-44fa-a19e-462768330c4e" message="hello"/>
             </on-error-propagate>
             <on-error-propagate type="APIKIT:NOT_FOUND">
                 <ee:transform>
