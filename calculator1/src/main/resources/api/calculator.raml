@@ -1,0 +1,72 @@
+#%RAML 1.0
+title: calcultor
+
+/addition:
+  get:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"result":"addition is 12"}
+      400:
+        body:
+          application/json:
+            example:
+              {"result":"Bad Request"}
+/substractoin:
+  get:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"result":"substraction is 12"}
+      400:
+        body:
+          application/json:
+            example:
+              {"result":"Bad Request"}
+/multiplication:
+  get:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"result":"multiplication is 12"}
+      400:
+        body:
+          application/json:
+            example:
+              {"result":"Bad Request"}     
+              
+
+      
+              
+
+
+
+
+
